@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>super fat food kfc</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>hello this is my fast food store name kfmanc</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">kfc real</a></li>
+        <li><a href="#about">very super fat food</a></li>
+        <li><a href="#contact">call if you want a free cookie and cocapepi</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home">
+      <h2>Home Section</h2>
+      <p>chicken fried potato fried hamburgur cheems ranny taco
+      </p>
+    </section>
+
+    <section id="about">
+      <h2>About Section</h2>
+      <p>buying cheaper fast food than another fast food store</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Section</h2>
+      <p>wanna some kfc.</p>
+    </section>
+    <section id="feedback">
+      </section>
+      <img src="./images/th.jpg" alt="">
+
+      <input type="text" id="userInput" placeholder="order something...">
+      <button onclick="getResponse()">Submit</button>
+      <div id="response"></div>
+      <script>
+        const simpleAI = {
+          respondTo: function(input) {
+            const lowerInput = input.toLowerCase();
+            if (lowerInput.includes('hello')) {
+              return 'lô con cặc';
+            } else if (lowerInput.includes('how are you')) {
+              return 'I am just a simple AI, but thank you for asking!';
+            } else if (lowerInput.includes('javascript')) {
+              return 'I love JavaScript! It powers me.';
+            } else if (lowerInput.includes('hey')) {
+              return 'what do you want to buy.';
+            } 
+            else if (lowerInput.includes('list')) {
+              return 'we have:chicken,hamburger,fried ';
+            }
+            else if (lowerInput.includes('wf')) {
+              return 'we have:chicken,hamburger,fried ';
+            }
+            else if (lowerInput.includes('list')) {
+              return 'we have chicken hamburger fried ';
+            } else {
+              return "I'm sorry, I don't understand that.";
+            } 
+          }
+        };
+            function getResponse() {
+          const userInput = document.getElementById('userInput').value;
+          const response = simpleAI.respondTo(userInput);
+          document.getElementById('response').innerText = response;
+        }
+      </script>
+  </main>
